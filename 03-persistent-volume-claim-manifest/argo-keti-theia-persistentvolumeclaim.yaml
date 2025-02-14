@@ -9,7 +9,7 @@ spec:
         resources:
                 requests:
                         storage: 1Gi
-        storageClassName: keti-theia-pv-01
+        storageClassName: keti-theia-ide-sc
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -22,4 +22,4 @@ spec:
         resources:
                 requests:
                         storage: 15Gi
-        storageClassName: keti-theia-dind-01
+        storageClassName: keti-theia-ide-sc

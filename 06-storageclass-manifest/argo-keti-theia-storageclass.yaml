@@ -1,0 +1,10 @@
+apiVersion: storage.k8s.io/v1
+kindd: StorageClass
+metadata:
+        name: keti-theia-ide-sc
+provisioner: nfs.csi.k8s.io
+parameters:
+        server: 10.0.2.192
+        share: /pv/keti-theia
+reclaimPolicy: Retain
+volumeBindingMode: Immediate
