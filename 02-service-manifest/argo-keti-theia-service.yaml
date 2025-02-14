@@ -11,3 +11,17 @@ spec:
                 - protocol: TCP
                   port: 30125
                   targetPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+        name: theia-ingress-service02
+        namespace: keti-product
+spec:
+        selector:
+                app.kubernetes.io/name: theia-deploy02
+        type: ClusterIP
+        ports:
+                - protocol: TCP
+                  port: 30125
+                  targetPort: 3000

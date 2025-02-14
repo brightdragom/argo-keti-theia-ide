@@ -38,10 +38,10 @@ spec:
       volumes:
       - name: nfs-pv-01
         persistentVolumeClaim:
-                claimName: theia-pvc-01
+          claimName: theia-pvc-01
       - name: dind-storage
         persistentVolumeClaim:
-                claimName: theia-dini-pvc-01
+          claimName: theia-dini-pvc-01
         #        nfs:
         #          server: 10.10.30.60
         #          path: /pv/keti/auth/01/dind-workspace
