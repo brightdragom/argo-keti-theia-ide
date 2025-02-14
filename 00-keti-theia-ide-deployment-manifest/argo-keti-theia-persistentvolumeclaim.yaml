@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+        name: theia-pvc-01
+        namespace: keti-product
+spec:
+        accessModes:
+                - ReadWriteOnce
+        resources:
+                requests:
+                        storage: 1Gi
+        storageClassName: keti-theia-pv-01
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+        name: keti-theia-dind-pvc-01
+        namespace: keti-product
+spec:
+        accessModes:
+                - ReadWriteOnce
+        resources:
+                requests:
+                        storage: 15Gi
+        storageClassName: keti-theia-dind-01

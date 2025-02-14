@@ -1,0 +1,45 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+        name: keti-theia-ingress
+        namespace: keti-product
+        annotations:
+                nginx.ingress.kubernetes.io/rewrite-target: /$2
+                nginx.ingress.kubernetes.io/enable-cors: "true"
+                nginx.ingress.kubernetes.io/cors-allow-methods: "PUT, GET, POST, OPTIONS"
+                nginx.ingress.kubernetes.io/cors-allow-origin: "http://localhost:80, http://10.10.30.61:80,  http://hybrid.strato.co.kr:80"
+                nginx.ingress.kubernetes.io/cors-allow-credentials: "true"
+spec:
+        ingressClassName: nginx
+        rules:
+                #- host: hybrid.keti.co.kr
+                - http:
+                        paths:
+                                - path: /keti01(/|$)(.*)
+                                  pathType: Prefix
+                                  backend:
+                                          service:
+                                                  name: theia-ingress-service01
+                                                  port:
+                                                          number: 30125
+                                - path: /keti02(/|$)(.*)
+                                  pathType: Prefix
+                                  backend:
+                                          service:
+                                                  name: theia-ingress-service02
+                                                  port:
+                                                          number: 30125
+                                - path: /keti03(/|$)(.*)
+                                  pathType: Prefix
+                                  backend:
+                                          service:
+                                                  name: theia-ingress-service03
+                                                  port:
+                                                          number: 30125
+                                - path: /keti04(/|$)(.*)
+                                  pathType: Prefix
+                                  backend:
+                                          service:
+                                                  name: theia-ingress-service04
+                                                  port:
+                                                          number: 30125
