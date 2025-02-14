@@ -37,12 +37,11 @@ spec:
           value: "tcp://0.0.0.0:2375"
       volumes:
       - name: nfs-pv-01
-        emptyDir: {}
-        #        nfs:
-        #          server: 10.10.30.60
-        #          path: /pv/keti/auth/01/workspace
+        persistentVolumeClaim:
+                claimName: theia-pvc-01
       - name: dind-storage
-        emptyDir: {}
+        persistentVolumeClaim:
+                claimName: theia-dini-pvc-01
         #        nfs:
         #          server: 10.10.30.60
         #          path: /pv/keti/auth/01/dind-workspace
@@ -86,12 +85,15 @@ spec:
           value: "tcp://0.0.0.0:2375"
       volumes:
       - name: nfs-pv-02
-        emptyDir: {}
+        persistentVolumeClaim:
+          claimName: theia-pvc-02
+        #emptyDir: {}
         #        nfs:
         #          server: 10.10.30.60
         #          path: /pv/keti/auth/01/workspace
       - name: dind-storage
-        emptyDir: {}
+        persistentVolumeClaim:
+                claimName: keti-theia-dind-pvc-02
         #        nfs:
         #          server: 10.10.30.60
         #          path: /pv/keti/auth/01/dind-workspace

@@ -23,3 +23,29 @@ spec:
                 requests:
                         storage: 15Gi
         storageClassName: keti-theia-ide-sc
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+        name: theia-pvc-02
+        namespace: keti-product
+spec:
+        accessModes:
+                - ReadWriteOnce
+        resources:
+                requests:
+                        storage: 1Gi
+        storageClassName: keti-theia-ide-sc
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+        name: keti-theia-dind-pvc-02
+        namespace: keti-product
+spec:
+        accessModes:
+                - ReadWriteOnce
+        resources:
+                requests:
+                        storage: 15Gi
+        storageClassName: keti-theia-ide-sc
