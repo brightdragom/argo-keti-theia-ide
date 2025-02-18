@@ -4,7 +4,7 @@ metadata:
   name: theia-deploy01
   namespace: keti-product
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app.kubernetes.io/name: theia-deploy01
@@ -49,7 +49,7 @@ metadata:
   name: theia-deploy02
   namespace: keti-product
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app.kubernetes.io/name: theia-deploy02
@@ -94,7 +94,7 @@ metadata:
   name: theia-deploy03
   namespace: keti-product
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app.kubernetes.io/name: theia-deploy03
@@ -139,7 +139,7 @@ metadata:
   name: theia-deploy04
   namespace: keti-product
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app.kubernetes.io/name: theia-deploy04
