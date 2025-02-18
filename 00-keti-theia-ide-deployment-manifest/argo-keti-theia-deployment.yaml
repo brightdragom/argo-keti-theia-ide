@@ -41,7 +41,7 @@ spec:
           claimName: theia-pvc-01
       - name: dind-storage
         persistentVolumeClaim:
-          claimName: theia-dini-pvc-01
+          claimName: keti-theia-dini-pvc-01
 ---
 apiVersion: apps/v1
 kind: Deployment
