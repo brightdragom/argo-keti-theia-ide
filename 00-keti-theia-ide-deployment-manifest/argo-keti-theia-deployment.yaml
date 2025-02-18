@@ -153,7 +153,7 @@ spec:
         image: gwangyong/enhanced-keti-theia-ide:1.1.7
         imagePullPolicy: IfNotPresent
         volumeMounts:
-        - name: nfs-pv-02
+        - name: nfs-pv-04
           mountPath: /home/theia/workspace
         env:
         - name: DOCKER_HOST
